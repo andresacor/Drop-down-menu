@@ -1,0 +1,241 @@
+
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* Reset*/
+/* ----------------------------------------------------------------------------------------------------- */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* Fin */
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* Menu */
+/* ----------------------------------------------------------------------------------------------------- */
+.menu{
+    background-color: #000;
+    position: relative;
+    padding: 1rem;   
+}
+
+.menu__lista {
+    /* width: 100%;  */
+    display: none;
+    margin-top: 1rem;
+}
+
+.menu__item {
+    position: relative;
+    padding: 1rem 0;
+    list-style-type: none;
+}
+
+.menu__enlace {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(114, 109, 109);
+    font-size: 0.85rem;
+}
+
+.menu__enlace:hover {color: #fff;}
+/* ----------------------------------------------------------------------------------------------------- */
+/* Fin */
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* Submenu */
+/* ----------------------------------------------------------------------------------------------------- */
+.submenu {
+    display: none;
+    background: #000;
+    width: 100%;
+    padding-top: 1rem;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.menu__item:hover  .submenu   {display: block;}
+
+/* .menu__item .submenu .submenu__item{position: relative;}  */
+
+.submenu__item{
+    list-style-type: none;
+    padding: 1rem 1rem;
+    text-align: left;
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.submenu__item:last-child {border-bottom: 1px solid rgba(255,255,255,0.5);}
+
+.submenu__enlace{
+    text-decoration: none;
+    color: rgb(114, 109, 109);
+    text-decoration: none;
+    font-size: 0.90rem;  
+}
+
+.submenu__item:hover {
+     background-color: rgb(51, 50, 50);
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* Fin */
+/* ----------------------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* Icono hamburguesa */
+/*----------------------------------------------------------------------------------------------------- */
+menu__toggle {
+    padding-left: 10px;
+    /* padding: 1rem; */
+    width: 100%;
+    margin-top: 2rem;
+    position: relative;
+}
+
+/* #menu__toggle>img {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+} */
+
+#menu__toggle > .caja {
+    display: block;
+    width: 30px;
+    height: 3px;
+   
+    margin: 10px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+
+}
+
+.fixed-menu {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    min-width: 4000px;
+    
+}
+
+.icono {
+    color: #fff;
+  
+    font-size: 2rem;
+}
+/* ----------------------------------------------------------------------------------------------------- */
+/* Fin */
+/* ----------------------------------------------------------------------------------------------------- */
+
+/*********************************************************************************************************/
+                                        /* TABLET */
+/*********************************************************************************************************/
+ 
+@media(min-width: 48rem){
+/* ----------------------------------------------------------------------------------------------------- */
+/* Menu */
+/* ----------------------------------------------------------------------------------------------------- */
+    .contenedor-menu{
+        display: flex;
+        justify-content: flex-end;
+        /* margin: auto; */
+        /* width: 100%;  */
+        background-color: red;
+    }
+
+    .logo{width: auto;}
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+    }
+
+    .menu__lista {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+        width: auto;  
+        margin-top: 0;
+    }
+
+    .menu__item {
+        /* flex: auto; */
+        text-align: center; 
+        padding: 1rem;   
+    }
+
+    .menu__item:hover {background-color: transparent;}
+
+    .menu__enlace {
+        font-size: 0.85rem;
+        font-weight: bold; 
+    }
+
+    .menu__enlace:hover {color: #fff;}
+/* ----------------------------------------------------------------------------------------------------- */
+/* Fin */
+/* ----------------------------------------------------------------------------------------------------- */
+    
+
+
+/* ----------------------------------------------------------------------------------------------------- */
+/* Submenu
+/* ----------------------------------------------------------------------------------------------------- */
+    .submenu {
+        position: absolute;
+        display: none;
+        background: #000;
+        width: 100%;
+        padding-top: 1rem;
+        border-radius: 5px;
+        z-index: -1;
+    }
+    
+   
+     .submenu__item:hover:nth-child(1),
+     .submenu__item:hover:nth-child(2) {
+         border-radius:0;
+         background-color: rgb(51, 50, 50);
+     }
+
+        /*Bordes redondeados para el ultimo hijo del submenu*/
+    .submenu__item:hover:last-child {
+        background-color: rgb(51, 50, 50);
+        border-radius: 0 0 5px 5px;
+    }
+/* ----------------------------------------------------------------------------------------------------- */
+/* Fin */
+/* ----------------------------------------------------------------------------------------------------- */
+
+    #menu__toggle {
+        display: none;
+        margin-top: 0;
+    }
+
+
+
+   
+}
+
+
+
+

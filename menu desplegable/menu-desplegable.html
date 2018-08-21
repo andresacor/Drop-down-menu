@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu desplegable</title>
+    <link rel="stylesheet" href="css/menu-desplegable.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="menu">
+    <a href="#" class='logo'>
+        <img src="img/logo-andres.svg" alt="logo" width='40' class='icon'>
+    </a>
+    
+    <div id="menu__toggle">
+        <div class="caja">
+        <i class="icono fas fa-bars"></i>
+        </div>
+        <!-- <img src="img/hamburguer-icon.svg" alt="icono" width='40'> -->
+        <!-- <span></span>
+        <span></span>
+        <span></span> -->
+    </div>
+    <!-- <div class='contenedor-menu'> -->
+     
+        
+        <ul class="menu__lista">
+            <!-- <li class="menu__item">
+                <a href="" class='menu__enlace'>Inicio</a>
+            </li> -->
+            <li class="menu__item">
+                <a href="#" class='menu__enlace'>Acerca de nosotros</a>
+            </li>
+            <li class="menu__item  ">
+                <a href="#" class='menu__enlace'>Nuestros proyectos</a>
+                
+                <ul class="submenu" >
+                    <li class='submenu__item'>
+                        <a href="#" class='submenu__enlace'>Proyecto 1</a>
+                    </li>
+                    <li class='submenu__item'>
+                        <a href="#" class='submenu__enlace'>Proyecto 2</a>
+                    </li>
+                    <li class='submenu__item'>
+                        <a href="#" class='submenu__enlace'>Proyecto 3</a>
+                    </li>
+                    <li class='submenu__item'>
+                        <a href="#" class='submenu__enlace'>Proyecto 1</a>
+                    </li>
+                    <li class='submenu__item'>
+                        <a href="#" class='submenu__enlace'>Proyecto 2</a>
+                    </li>
+                    <li class='submenu__item'>
+                        <a href="#" class='submenu__enlace'>Proyecto 3</a>
+                    </li>
+                </ul>
+            
+            </li>
+            <li class="menu__item">
+                <a href="#" class='menu__enlace'>Que hacemos</a>
+            </li>
+            <li class="menu__item">
+                <a href="#" class='menu__enlace'>Donde estamos</a>
+            </li>
+        </ul>
+    <!-- </div> -->
+</nav>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/all.js"></script>
+<script>
+
+ $('#menu__toggle').click(function () {
+        $(this).next().slideToggle();
+});
+</script>
+
+
+</body>
+</html>
